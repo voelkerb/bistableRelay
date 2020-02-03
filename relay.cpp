@@ -17,6 +17,11 @@ Relay::Relay(int pinSet, int pinReset) {
   state = -1;
   pinMode(_SET_PIN, OUTPUT);
   pinMode(_RES_PIN, OUTPUT);
+  _switchCB = NULL;
+}
+
+void Relay::setCallback(void (*cb)(bool)) {
+  _switchCB = cb;
 }
 
 void Relay::set(bool value) {
@@ -28,4 +33,5 @@ void Relay::set(bool value) {
   digitalWrite(_SET_PIN, LOW);
   digitalWrite(_RES_PIN, LOW);
   state = (int)value;
+  if (_switchCB) _switchCB(value);
 }

@@ -24,10 +24,12 @@ class Relay {
   public:
     Relay(int setPin, int resetPin);
     void set(bool value);
+    void setCallback(void (*cb)(bool));
     int state;
   private:
     uint8_t _SET_PIN;
     uint8_t _RES_PIN;
+    void (*_switchCB)(bool);
 };
 
 #endif
