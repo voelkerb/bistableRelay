@@ -26,6 +26,8 @@ void Relay::setCallback(void (*cb)(bool)) {
 
 void Relay::set(bool value) {
   if (state != -1 and (bool)state == value) return;
+  digitalWrite(_SET_PIN, LOW);
+  digitalWrite(_RES_PIN, LOW);
   digitalWrite(_SET_PIN, value);
   digitalWrite(_RES_PIN, !value);
   delay(HOLD_TIME_MS);
