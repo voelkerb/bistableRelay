@@ -21,12 +21,16 @@
 
 class Relay {
   public:
-    Relay(int setPin, int resetPin);
+    Relay(int setPin, int resetPin=-1, bool activeLow=false);
+    // init the relay to a fix state
+    void init(bool value);
     void set(bool value);
     void setCallback(void (*cb)(bool));
     int state;
     int holdTime;
   private:
+    bool _bistableMode;
+    bool _activeLow;
     uint8_t _SET_PIN;
     uint8_t _RES_PIN;
     void (*_switchCB)(bool);
