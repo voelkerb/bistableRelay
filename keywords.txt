@@ -1,0 +1,29 @@
+#######################################
+# Syntax Coloring Relay Library
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+	
+Network	KEYWORD1
+Relay		KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+set	        KEYWORD2
+setCallback KEYWORD2
+state	    KEYWORD2
+holdTime	KEYWORD2
+
+#######################################
+# Structures (KEYWORD3)
+#######################################
+
+
+#######################################
+# Constants (LITERAL1)
+
+DEFAULT_HOLD_TIME_MS    LITERAL1
+#######################################

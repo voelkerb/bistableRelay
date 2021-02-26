@@ -2,11 +2,10 @@
  Library for switching a bistable relais using set
  and reset pins
 
- Feel free to use the code as it is.
+ License: Creative Common V1. 
 
- Benjamin Völker, voelkerb@me.com
- Embedded Systems
- University of Freiburg, Institute of Informatik
+ Benjamin Voelker, voelkerb@me.com
+ Embedded Systems Engineer
  ****************************************************/
 
 #ifndef RELAY_h
@@ -18,7 +17,7 @@
 #include "WProgram.h"
 #endif
 
-#define HOLD_TIME_MS 20 // Relais must be held this ms until state is set
+#define DEFAULT_HOLD_TIME_MS 20 // Relais must be held this ms until state is set
 
 class Relay {
   public:
@@ -26,6 +25,7 @@ class Relay {
     void set(bool value);
     void setCallback(void (*cb)(bool));
     int state;
+    int holdTime;
   private:
     uint8_t _SET_PIN;
     uint8_t _RES_PIN;

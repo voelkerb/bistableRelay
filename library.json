@@ -1,0 +1,20 @@
+{
+	"name": "BistableRelay",
+	"version": "1.0.0",
+	"keywords": "Communication",
+	"description": "A simple library to control a bistable relay with set and reset pins.",
+	"authors":
+	[
+		{
+		"name": "Benjamin Voelker",
+		"email": "voelkerb@me.com",
+		"url": "http://github.com/voelkerb/bistableRelay"
+		}
+	],
+	"repository":
+	{
+		"type": "git",
+		"url": "http://github.com/voelkerb/bistableRelay.git"
+	},
+	"frameworks": "arduino"
+}
